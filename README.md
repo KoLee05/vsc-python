@@ -59,6 +59,76 @@ Feladatmegosztás más felhasználókkal
 Napi statisztika / dashboard
 
 
+Rendszerarchitektúra
+A projekt egy klasszikus kliens-szerver architektúrát követ, két fő komponenssel:
+
+Frontend: React alapú felhasználói felület
+
+Backend: FastAPI keretrendszerű REST API
+
+A kliens és a szerver közötti kommunikáció HTTP protokollon keresztül történik, JSON formátumú adatcserével.
+
+
+Frontend – React + Vite + Tailwind CSS
+Elérési út: tasknest-frontend/
+
+Főbb jellemzők:
+
+React: Komponensalapú felépítés, amely lehetővé teszi az újrafelhasználható UI elemek létrehozását.
+
+Vite: Gyors fejlesztői szerver és build eszköz, amely optimalizálja a fejlesztési élményt.
+
+Tailwind CSS: Utility-first CSS keretrendszer a gyors és reszponzív dizájn kialakításához.
+
+Funkcionalitás:
+
+Feladatkezelés: Feladatok létrehozása, szerkesztése és megjelenítése
+
+Űrlapkezelés: Űrlapok a feladatok adatainak beviteléhez
+
+Állapotkezelés: React useState és useEffect hook-ok a komponens állapotának és életciklusának kezelésére
+
+API kommunikáció: fetch API használata a backenddel való kommunikációhoz
+
+
+Backend – FastAPI REST API
+Elérési út: backend/
+
+Főbb jellemzők:
+
+FastAPI: Modern, gyors (high-performance) Python web keretrendszer, automatikus dokumentációval
+
+RESTful API: HTTP metódusok (GET, POST, PUT, DELETE) használata a CRUD műveletekhez
+
+Adatbázis-kezelés: SQLite használata fejlesztéshez, később PostgreSQL-re is átállítható
+
+Pydantic: Adatvalidálás és séma-definíciók a bemeneti és kimeneti adatokhoz
+
+Funkcionalitás:
+
+Feladatok kezelése: Feladatok létrehozása, lekérdezése, frissítése és törlése
+
+Adatmodell: Feladatok attribútumai: cím, leírás, határidő, státusz
+
+CORS támogatás: Cross-Origin Resource Sharing engedélyezése a frontend és backend közötti kommunikációhoz
+
+
+Adatmodell
+A rendszer egy egyszerű adatmodellt használ a feladatok kezelésére:
+
+Feladat (Task):
+
+id: Egyedi azonosító
+
+title: A feladat címe
+
+description: A feladat leírása
+
+due_date: Határidő
+
+status: A feladat állapota (pl. "todo", "in progress", "done")
+
+
 Telepítési útmutató:
 
 1. Hozzunk létre egy üres mappát valahol a saját gépen.
