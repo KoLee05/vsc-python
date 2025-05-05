@@ -91,14 +91,12 @@ Feladatkezelés: Feladatok létrehozása, szerkesztése és megjelenítése
 API kommunikáció: fetch API használata a backenddel való kommunikációhoz
 
 
-Backend – FastAPI REST API
+Backend – FastAPI
 Elérési út: backend/
 
 Főbb jellemzők:
 
 FastAPI: Modern, gyors (high-performance) Python web keretrendszer, automatikus dokumentációval
-
-RESTful API: HTTP metódusok (GET, POST, PUT, DELETE) használata a CRUD műveletekhez
 
 Adatbázis-kezelés: SQLite használata fejlesztéshez, később PostgreSQL-re is átállítható
 
